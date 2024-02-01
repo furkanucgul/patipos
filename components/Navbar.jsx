@@ -8,10 +8,10 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
-const Navbar = () => {
+const Navbar = ({ open, setOpen }) => {
     const [category, setCategory] = useState('10');
-    const [open, setOpen] = useState(true)
 
     const handleChange = (event) => {
         setCategory(event.target.value);
@@ -77,7 +77,7 @@ const Navbar = () => {
                     </Link>
                 </div>
             </div>
-            <div className={` transition-all delay-75 flex flex-col gap-2 border-r border-slate-300 h-screen py-5 px-3 ${open ? 'w-[280px]' : 'w-[0px] !px-0'} overflow-hidden`}>
+            <div className={`fixed bg-white transition-all delay-75 flex flex-col gap-2 border-r border-slate-300 h-full py-5 px-3 ${open ? 'w-full lg:w-[280px]' : 'w-[0px] !px-0'} overflow-hidden`}>
                 <div className='flex justify-between items-center'>
                     <img
                         width={113}
@@ -85,7 +85,14 @@ const Navbar = () => {
                         src="https://patipos.app/logo-dark.svg"
                         alt="logo"
                     />
-                    <span className='bg-slate-200 rounded-full px-2 py-1 text-green-700 text-sm'>
+                    <button
+                        onClick={() => setOpen(!open)}
+                        className='text-slate-500 md:hidden'
+                    >
+                        <ArrowBackIosNewIcon color='inherit' />
+                    </button>
+
+                    <span className='bg-slate-200 rounded-full px-2 py-1 text-green-700 text-sm hidden md:block'>
                         1.2.132 Beta
                     </span>
                 </div>
@@ -198,7 +205,7 @@ const Navbar = () => {
 
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

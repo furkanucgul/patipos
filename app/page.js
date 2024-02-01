@@ -1,13 +1,20 @@
+'use client'
 import HomePage from "@/components/Homepage/HomePage";
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [open, setOpen] = useState(true)
   return (
     <main className="flex">
-      <Navbar />
+      <Navbar
+        open={open}
+        setOpen={setOpen}
+      />
 
-      <HomePage />
+      <HomePage
+        open={open}
+      />
     </main>
   );
 }
