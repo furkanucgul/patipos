@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const HomePage = ({ open }) => {
     return (
-        <div className={`mt-24 w-full px-7 flex flex-col gap-5 ${open ? "ml-[270px]" : "ml-0"} transition-all delay-75`}>
+        <div className={`mt-24 w-full px-7 flex flex-col gap-5 ${open ? "lg:ml-[270px]" : "ml-0"} transition-all delay-75`}>
             <div className='flex justify-between w-full'>
                 <div>
                     <Link

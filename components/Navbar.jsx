@@ -19,7 +19,7 @@ const Navbar = ({ open, setOpen }) => {
 
     return (
         <>
-            <div className='fixed top-0 left-0 flex justify-between w-screen px-7 py-5 bg-white transition-all delay-75'
+            <div className='fixed top-0 flex justify-between w-screen px-7 py-5 bg-white transition-all delay-75'
                 style={open && {
                     width: `calc(100% - 280px)`,
                     marginLeft: `280px`,
@@ -27,7 +27,7 @@ const Navbar = ({ open, setOpen }) => {
             >
                 <button
                     onClick={() => setOpen(!open)}
-                    className='text-slate-500'
+                    className="text-slate-500"
                 >
                     <MenuIcon color='inherit' />
                 </button>
@@ -77,7 +77,7 @@ const Navbar = ({ open, setOpen }) => {
                     </Link>
                 </div>
             </div>
-            <div className={`fixed bg-white transition-all delay-75 flex flex-col gap-2 border-r border-slate-300 h-full py-5 px-3 ${open ? 'w-full lg:w-[280px]' : 'w-[0px] !px-0'} overflow-hidden`}>
+            <div className={`fixed bg-white transition-all delay-75 flex flex-col gap-2 border-r border-slate-300 h-full py-5 px-3 ${open ? 'w-[280px]' : 'w-[0px] !px-0'} overflow-hidden`}>
                 <div className='flex justify-between items-center'>
                     <img
                         width={113}
