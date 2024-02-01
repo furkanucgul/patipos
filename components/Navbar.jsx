@@ -77,7 +77,7 @@ const Navbar = () => {
                     </Link>
                 </div>
             </div>
-            <div className={` transition-all delay-75 flex flex-col gap-2 border-r border-slate-300 h-screen py-5 px-3 ${open ? 'w-[280px]' : 'w-[0px] px-0'} overflow-hidden`}>
+            <div className={` transition-all delay-75 flex flex-col gap-2 border-r border-slate-300 h-screen py-5 px-3 ${open ? 'w-[280px]' : 'w-[0px] !px-0'} overflow-hidden`}>
                 <div className='flex justify-between items-center'>
                     <img
                         width={113}
