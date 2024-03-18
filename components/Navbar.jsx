@@ -96,14 +96,14 @@ const Navbar = ({ open, setOpen }) => {
                         1.2.132 Beta
                     </span>
                 </div>
-                <div>
+                <div className='mt-5'>
                     <FormControl fullWidth>
                         <InputLabel id="demo-simple-select-label">Age</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
                             value={category}
-                            label="Age"
+                            label="Odalar"
                             onChange={handleChange}
                         >
                             <MenuItem value={10}>Ameliyathane 1</MenuItem>
